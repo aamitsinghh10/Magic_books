@@ -1,0 +1,139 @@
+.container {
+  margin-top: 50px;
+}
+
+.register {
+  text-align: center;
+}
+
+.wrapper {
+  width: 360px;
+  padding: 20px;
+  margin: 0 auto;
+  background: linear-gradient(to right, #e0efff, #d3d3d3);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form {
+  margin-top: 30px;
+  animation: slideUp 1s ease-in-out;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.btn-login {
+  display: block;
+  margin: 0 auto;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn-login:hover {
+  background-color: #45a049;
+  animation: pulse 1s ease-in-out;
+}
+
+.error {
+  color: red;
+  animation: shake 1s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  10%, 90% {
+    transform: translateX(-10px);
+  }
+  30%, 70% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+}
+select {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  color: #555;
+  padding: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+}
+
+select option {
+  color: #555;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 5px;
+}
+
+select option.user {
+  font-weight: bold;
+}
+
+select option.admin {
+  color: #fff;
+  background-color: #4CAF50;
+}
