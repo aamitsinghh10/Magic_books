@@ -19,13 +19,13 @@ public class Book {
     private String description;
     @Column(name = "cover_image")
     private String coverImage;
-    private double price;
+    private String price;
     private double rating;
 
     public Book() {
     }
 
-    public Book(int bookid, String title, String author, String genre, String publication, String description, String coverImage, double price, double rating) {
+    public Book(int bookid, String title, String author, String genre, String publication, String description, String coverImage, String price, double rating) {
         this.id = bookid;
         this.title = title;
         this.author = author;
@@ -93,11 +93,11 @@ public class Book {
         this.coverImage = coverImage;
     }
 
-    public double getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 

@@ -16,7 +16,7 @@
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
-<link href="resources/css/liked.css" rel="stylesheet" type="text/css">
+<link href="resources/css/liked.css/" rel="stylesheet" type="text/css">
 
 </head>
 <body>
@@ -66,43 +66,46 @@
 		if (id2 != null) {
 		%>
 <div class="container mt-4">
-        <h1 class="mb-4">Read Later Books</h1>
-        <div class="row">
-            <c:forEach var="book" items="${readLater}">
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
-                        <img src="${book.coverImage}" class="card-img-top" alt="${book.title} Cover Image">
-                        <div class="card-body">
-                            <h5 class="card-title">${book.title}</h5>
-                            <p class="card-text"><strong>Author:</strong> ${book.author}</p>
-                            <p class="card-text"><strong>Publication:</strong> ${book.publication}</p>
-                            <p class="card-text"><strong>Genre:</strong> ${book.genre}</p>
-                            <p class="card-text"><strong>Description:</strong> ${book.description}</p>
-                            <p class="card-text"><strong>Rating:</strong> ${book.rating}</p>
-                            <h6 class="card-subtitle mb-2 text-muted">Price: $${book.price}</h6>
-                            <div><br>
-                            	<a href="${pageContext.servletContext.contextPath}/readlater/delete?bookid=${book.id}">
-                            	<button type="button" class="btn btn-primary">Remove</button></a>
-                            </div>
-                            <div><br>
-                            	<a href="${pageContext.servletContext.contextPath}/likedbook?bookid=${book.id}">
-                            	<button type="button" class="btn btn-primary">Liked</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </c:forEach>
-        </div>
-    </div>
-	<%} else { %>
+             <h1 class="mb-4">List Of Books</h1>
+                 <div class="row">
+                     <c:forEach var="book" items="${books}">
+                         <div class="col-md-4">
+                             <div class="card mb-4 shadow-sm">
+                             <img src="${book.coverImage}" class="card-img-top" alt="${book.title} Cover Image">
+                             <div class="card-body">
+                               <h5 class="card-title">${book.title}</h5>
+                               <p class="card-text"><strong>Author:</strong> ${book.author}</p>
+                               <p class="card-text"><strong> Publication:</strong> ${book.publication}</p>
+                               <p class="card-text"><strong>Genre:</strong> ${book.genre}</p>
+                               <p class="card-text"><strong>Description:</strong> ${book.description}</p>
+                               <p class="card-text"><strong>Rating:</strong> ${book.rating}</p>
+                               <h6 class="card-subtitle mb-2 text-muted">Price: $${book.price}</h6>
+                               <div class="d-flex justify-content-between align-items-center">
+                                 <div>
+                                   	<br> <a
+                                   	href="${pageContext.servletContext.contextPath}/readlater/delete?bookid=${book.id}">
+                                   	<button type="button" class="btn btn-primary">Remove</button></a>
+                                 </div>
+                                 <div>
+                                   	<br> <a
+                                    href="${pageContext.servletContext.contextPath}/likedbook?bookid=${book.id}">
+                                   	<button type="button" class="btn btn-primary">Liked</button></a>
+                                 </div>
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                         </c:forEach>
+                     </div>
+                 </div>
+    	<%} else { %>
 
-		<div>
-			<h2>Please login first</h2>
-			<a href="${pageContext.servletContext.contextPath}/login">
-			<button >Login</button>
-			</a>
-		</div>
-	<%} %>
-
+    		<div>
+    			<h2>Please login first</h2>
+    			<a href="${pageContext.servletContext.contextPath}/login">
+    			<button >Login</button>
+    			</a>
+    		</div>
+    	<%} %>
 </body>
 </html>

@@ -1,88 +1,101 @@
-/* Font styles */
-body {
-  font-family: 'Open Sans', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-}
-
-/* Navbar styles */
+/* Navbar background color and height */
 .navbar {
-  background-color: #343a40;
-  border: none;
+background-color: #343a40;
+height: 70px;
 }
 
-.nav-link {
-  font-size: 1.2rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.3rem;
-  transition: background-color 0.3s ease;
+/* Navbar logo/image */
+.navbar-brand img {
+height: 50px;
+width: auto;
 }
 
-.nav-link:hover {
-  background-color: #6c757d;
+/* Navbar active link styling */
+.navbar-dark .navbar-nav .nav-link.active {
+font-weight: bold;
+color: #f8b739 !important;
 }
 
-/* Book card styles */
+/* Navbar toggle button color */
+.navbar-toggler-icon {
+background-color: #fff;
+}
+
+/* Card view border radius and padding */
 .card {
-  border: none;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+border-radius: 10px;
+padding: 10px;
 }
 
-.card:hover {
-  transform: translateY(-0.5rem);
-}
-
-.card-img-top {
-  border-radius: 0.5rem 0.5rem 0 0;
-}
-
+/* Card view title and author styling */
 .card-title {
-  font-size: 1.2rem;
+font-size: 20px;
+font-weight: bold;
+margin-bottom: 10px;
 }
-
 .card-subtitle {
-  font-size: 1rem;
-  color: #6c757d;
+margin-top: 10px;
+font-size: 16px;
+font-weight: 500;
+color: #6c757d;
 }
 
-.card-text {
-  margin-bottom: 0.5rem;
-}
-
+/* Card view button styling */
 .btn-primary {
-  background-color: #007bff;
-  border: none;
-  transition: background-color 0.3s ease;
+background-color: #f8b739;
+border-color: #f8b739;
 }
-
 .btn-primary:hover {
-  background-color: #0069d9;
+background-color: #d89f16;
+border-color: #d89f16;
 }
 
-/* Read later button */
-.btn-read-later {
-  background-color: #28a745;
-  border: none;
-  transition: background-color 0.3s ease;
+/* Book cover image styling */
+.card-img-top {
+height: 250px;
+width: 100%;
+object-fit: cover;
+border-radius: 10px;
 }
 
-.btn-read-later:hover {
-  background-color: #218838;
+/* Book information styling */
+.card-text {
+font-size: 16px;
+font-weight: 400;
+color: #6c757d;
 }
 
-/* Remove button */
-.btn-remove {
-  background-color: #dc3545;
-  border: none;
-  transition: background-color 0.3s ease;
+/* Price styling */
+.card-subtitle.mb-2.text-muted {
+font-size: 18px;
+font-weight: bold;
 }
 
-.btn-remove:hover {
-  background-color: #c82333;
+/* Remove and Like button styling */
+.btn-group {
+margin-top: 10px;
+}
+.btn-secondary {
+background-color: #6c757d;
+border-color: #6c757d;
+}
+.btn-secondary:hover {
+background-color: #565e64;
+border-color: #565e64;
+}
+.btn-success {
+background-color: #28a745;
+border-color: #28a745;
+}
+.btn-success:hover {
+background-color: #218838;
+border-color: #218838;
 }
 
+/* Login message styling */
+.login-message {
+text-align: center;
+font-size: 24px;
+font-weight: bold;
+margin-top: 50px;
+}
