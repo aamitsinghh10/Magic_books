@@ -20,7 +20,7 @@ public class LikedService {
         }
     }
 
-    public List<Integer> fetchAllBooksListForUser(String email) {
+    public List<Integer> fetchAllBooksListForLikedUser(String email) {
         List<LikedBooks> books = this.likedDatabase.findAllByUseremail(email);
         List<Integer> bookIds = new ArrayList<>();
         for (LikedBooks book : books) {

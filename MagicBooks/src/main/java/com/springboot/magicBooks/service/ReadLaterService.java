@@ -19,7 +19,7 @@ public class ReadLaterService {
         }
     }
 
-    public List<Integer> fetchAllBooksListForUser(String email) {
+    public List<Integer> fetchAllBooksListForReadLaterUser(String email) {
         List<ReadLaterBooks> books = this.readLaterDatabase.findAllByUseremail(email);
         List<Integer> bookIds = new ArrayList<>();
         for (ReadLaterBooks book : books) {

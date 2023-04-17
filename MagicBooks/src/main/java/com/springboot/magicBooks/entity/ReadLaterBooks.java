@@ -37,4 +37,13 @@ public class ReadLaterBooks {
     public void setBookid(int bookid) {
         this.bookid = bookid;
     }
+
+    @Override
+    public String toString() {
+        return "ReadLaterBooks{" +
+                "id=" + id +
+                ", useremail='" + useremail + '\'' +
+                ", bookid=" + bookid +
+                '}';
+    }
 }

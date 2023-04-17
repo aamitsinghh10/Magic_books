@@ -54,20 +54,21 @@ public class DashboardController {
         if (session != null) {
             if (session.getAttribute("email") != null) {
                 List<Integer> listOfBookId = this.likedService
-                        .fetchAllBooksListForUser(session.getAttribute("email").toString());
+                        .fetchAllBooksListForLikedUser(session.getAttribute("email").toString());
                 map.put("books", bookService.booksForBookIds(listOfBookId));
             }
         }
         return "liked";
-
     }
 
     @GetMapping("/readlater/page")
     public String openReadLater(Map<String, List<Book>> map, HttpSession session) {
         if (session != null) {
+            //System.out.println("Open Read Later section");
             if (session.getAttribute("email") != null) {
+                //System.out.println("insider open read later");
                 List<Integer> listOfBookId = this.readLaterService
-                        .fetchAllBooksListForUser(session.getAttribute("email").toString());
+                        .fetchAllBooksListForReadLaterUser(session.getAttribute("email").toString());
 
                 map.put("books", bookService.booksForBookIds(listOfBookId));
             }
@@ -76,19 +77,19 @@ public class DashboardController {
     }
 
     @GetMapping("/readlater")
-    public String insertInReadLater(@RequestParam("id") Integer id, HttpSession session) {
+    public String insertInReadLater(@RequestParam("bookid") Integer bookid, HttpSession session) {
 
         ReadLaterBooks readLater = new ReadLaterBooks();
-        readLater.setBookid(id);
+        readLater.setBookid(bookid);
         readLater.setUseremail(session.getAttribute("email").toString());
         readLaterService.insert(readLater);
         return "redirect:/dashboard";
     }
 
     @GetMapping("/likedbook")
-    public String insertIntoLikedBook(@RequestParam("id")Integer id, HttpSession session) {
+    public String insertIntoLikedBook(@RequestParam("bookid")Integer bookid, HttpSession session) {
         LikedBooks books = new LikedBooks();
-        books.setBookid(id);
+        books.setBookid(bookid);
         books.setUseremail(session.getAttribute("email").toString());
         likedService.insert(books);
         return "redirect:/dashboard";
