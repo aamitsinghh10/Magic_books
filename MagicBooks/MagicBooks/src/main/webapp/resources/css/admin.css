@@ -1,0 +1,143 @@
+nav.navbar {
+  background-color: #343a40;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+nav.navbar .navbar-brand {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+nav.navbar .navbar-nav {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+nav.navbar .nav-item {
+  margin-left: 1rem;
+}
+
+nav.navbar .form-outline {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+nav.navbar .form-outline button {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  margin-left: 0.5rem;
+}
+
+nav.navbar .form-outline input {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  nav.navbar {
+    height: auto;
+  }
+  nav.navbar .navbar-brand {
+    margin-bottom: 1rem;
+  }
+  nav.navbar .navbar-nav {
+    margin-left: 0;
+    width: 100%;
+  }
+  nav.navbar .nav-item {
+    margin: 0.5rem 0;
+  }
+  nav.navbar .form-outline {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  nav.navbar .form-outline input {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+/* Book card styles */
+.card {
+  border: none;
+  background-color: #fff;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 1rem;
+}
+
+.card:hover {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+.card .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card .card-text {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.card .card-subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  color: #06c;
+}
+
+.card button {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  text-align: left;
+  background-color: rgba(255, 0, 0, 0.5);
+  color: #fff;
+}
+
+.card button:nth-child(2) {
+  background-color: rgba(0, 0, 255, 0.5);
+}
+
+.card img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Book card form styles */
+form.form-outline {
+  margin-top: 1rem;
+}
+
+.form-outline input {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  margin-right: 1rem;
+}
+
+.form-outline button {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #06c;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
