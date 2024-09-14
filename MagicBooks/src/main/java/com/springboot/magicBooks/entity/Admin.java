@@ -9,6 +9,7 @@ public class Admin {
     private String email;
     private String username;
     private String password;
+    private boolean approved;
 
     public Admin() {
     }
@@ -17,6 +18,7 @@ public class Admin {
         this.username = username;
         this.password = password;
         this.email = email;
+        this.approved = false;
     }
 
     public String getUsername() {
@@ -43,12 +45,21 @@ public class Admin {
         this.email = email;
     }
 
+    public boolean isApproved() {
+        return approved;
+    }
+
+    public void setApproved(boolean approved) {
+        this.approved = approved;
+    }
+
     @Override
     public String toString() {
         return "Admin{" +
                 "email='" + email + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
+                ", approved=" + approved +
                 '}';
     }
 }
